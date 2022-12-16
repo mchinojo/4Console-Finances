@@ -110,7 +110,9 @@ console.log("Month 4 minus month 3 =", finances[3][1] - finances[2][1]);
 
 // Substracting with a for loop
 
-sumOfChanges = 0;
+let sumOfChanges = 0;
+let maxDif = 0;
+let minDif = 0;
 
 for (let index = 1; index < finances.length; index++) {
 
@@ -119,7 +121,17 @@ for (let index = 1; index < finances.length; index++) {
 
     // console.log("The change in profits from month to month is", nextMonth - previousMonth);
 
-    sumOfChanges += (nextMonth - previousMonth);
+    let difMonths = (nextMonth - previousMonth);
+
+    sumOfChanges += difMonths;
+
+    if (difMonths > maxDif) {
+        maxDif = difMonths;
+    }
+
+    if (difMonths < minDif) {
+        minDif = difMonths;
+    }
 }
 
 console.log("The sum of changes is", sumOfChanges);
@@ -127,5 +139,8 @@ console.log("The sum of changes is", sumOfChanges);
 let averageChange = (sumOfChanges / (finances.length - 1))
 
 console.log("Average Change:", averageChange.toFixed(2));
+console.log("Greatest increase in Profits:", maxDif);
+console.log("Greatest decrease in Profits:", minDif);
+
 
 
