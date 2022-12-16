@@ -92,12 +92,30 @@ console.log("Total Months:", finances.length);
 
 // console.log("The 2nd data type of the 1st inner array is:", finances[0][1]);
 
-let totalAmount = 0
+let totalAmount = 0;
 for (let index = 0; index < finances.length; index++) {
 
-    // console.log("Numbers of the array:", finances[i][1]);
+    // console.log("Numbers of the array:", finances[index][1]);
 
     totalAmount += finances[index][1];
 }
 
 console.log("Total amount:", totalAmount);
+
+// Substracting manually
+console.log("Month 2 minus month 1 =", finances[1][1] - finances[0][1]);
+console.log("Month 3 minus month 2 =", finances[2][1] - finances[1][1]);
+console.log("Month 4 minus month 3 =", finances[3][1] - finances[2][1]);
+
+
+
+for (let index = 1; index < finances.length; index++) {
+
+    let nextMonth = finances[index][1];
+    let previousMonth = finances[index - 1][1];
+
+    console.log("The substraction of the next month and previous month is", nextMonth - previousMonth);
+
+
+}
+
