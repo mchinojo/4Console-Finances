@@ -88,7 +88,7 @@ let finances = [
 ];
 
 // The total number of months included in the dataset.
-console.log("Total Months:", finances.length);
+console.log(`Total Months: ${finances.length}`);
 
 // console.log("The 2nd data type of the 1st inner array is:", finances[0][1]);
 
@@ -96,6 +96,8 @@ let totalAmount = 0;
 let sumOfChanges = 0;
 let maxDif = 0;
 let minDif = 0;
+let maxMonth = "";
+let minMonth = "";
 for (let index = 0; index < finances.length; index++) {
 
     // console.log("Numbers of the array:", finances[index][1]);
@@ -114,22 +116,22 @@ for (let index = 0; index < finances.length; index++) {
 
         if (difMonths > maxDif) {
             maxDif = difMonths;
+            maxMonth = finances[index][0];
         }
 
         if (difMonths < minDif) {
             minDif = difMonths;
+            minMonth = finances[index][0];
         }
-
     }
 }
 
-console.log("Total amount:", totalAmount);
+console.log(`Total amount: ${totalAmount}`);
 
 // Substracting manually for testing
 // console.log("Month 2 minus month 1 =", finances[1][1] - finances[0][1]);
 // console.log("Month 3 minus month 2 =", finances[2][1] - finances[1][1]);
 // console.log("Month 4 minus month 3 =", finances[3][1] - finances[2][1]);
-
 
 // console.log("The change in profits from month to month is", nextMonth - previousMonth);
 
@@ -137,9 +139,9 @@ console.log("Total amount:", totalAmount);
 
 let averageChange = (sumOfChanges / (finances.length - 1))
 
-console.log("Average Change:", averageChange.toFixed(2));
-console.log("Greatest increase in Profits:", maxDif);
-console.log("Greatest decrease in Profits:", minDif);
+console.log(`Average Change: ${averageChange.toFixed(2)}`);
+console.log(`Greatest increase in Profits: ${maxMonth} (${maxDif})`);
+console.log(`Greatest decrease in Profits: ${minMonth} (${minDif})`);
 
 
 
