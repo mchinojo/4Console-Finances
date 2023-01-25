@@ -19,7 +19,7 @@ In this challenge, I have the task of create JavaScript code for analyzing the f
 
  I will try to put in practice some concepts I've learned so far, creating variables with primitive data types, using comparison operators, conditional statements and iterations and printing them on the console.
 
-Here is a link to the deployed application: https://mchinojo.github.io/Console-Finances/
+Here is a link to the deployed application: https://github.com/mchinojo/4Console-Finances
 
 
 ## Installation
